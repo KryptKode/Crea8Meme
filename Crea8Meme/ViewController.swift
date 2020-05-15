@@ -17,10 +17,19 @@ class ViewController: UIViewController {
 
 
     @IBAction func experiment(_ sender: Any) {
-        let image = UIImage()
-        let imagePicker = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+
+        let controller = UIAlertController()
+        controller.title = "Alert"
+        controller.message = "Hello world!"
         
-        present(imagePicker, animated: true, completion:nil)
+        let okayButton = UIAlertAction(title:"Okay", style: UIAlertAction.Style.default){
+            action in  self.dismiss(animated: true, completion: nil)
+        }
+        
+        controller.addAction(okayButton)
+        
+        present(controller, animated: true, completion:nil)
+
     }
 }
 
