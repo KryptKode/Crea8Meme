@@ -16,5 +16,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func experiment(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        
+        present(imagePicker, animated: true, completion:nil)
+    }
 }
 
