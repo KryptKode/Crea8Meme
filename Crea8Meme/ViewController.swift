@@ -17,7 +17,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func experiment(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
+        let image = UIImage()
+        let imagePicker = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         
         present(imagePicker, animated: true, completion:nil)
     }
